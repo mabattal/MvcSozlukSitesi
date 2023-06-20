@@ -11,5 +11,14 @@ namespace EntityLayer.Concrete
         public int HeadingID { get; set; }
         public string HeadingName { get; set; }
         public DateTime HeadingDate { get; set; }
+
+        //ilişkilendirilecek tablonun anahtar sütunuyla aynı isimlendirilmek zorunda
+        public int CtaegoryID { get; set; }
+        public virtual Category Category { get; set; }
+
+        public int WriterID { get; set; }
+        public virtual Writer Writer { get; set; }
+
+        public ICollection<Content> Contents { get; set; }
     }
 }

@@ -16,7 +16,7 @@ namespace EntityLayer.Concrete
         public DateTime HeadingDate { get; set; }
 
         //ilişkilendirilecek tablonun anahtar sütunuyla aynı isimlendirilmek zorunda
-        public int CtaegoryID { get; set; }
+        public int CategoryID { get; set; }
         public virtual Category Category { get; set; }
 
         public int WriterID { get; set; }

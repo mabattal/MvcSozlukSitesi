@@ -3,12 +3,16 @@
     Layout = null;
 }
 
+@*UI katmanı olan MvcProjeMY içindeki Content klasörü altında bulunan bootstrap.min.css dizinini sürükle bırak yaparak buraya ekliyoruz*@
+@*böylelikle bootstrap özelliklerini kullanabiliyoruz*@
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
 <!DOCTYPE html>
 
 <h3>Mvc Tablo Örneği - Kategori</h3>
 <br />
 
-<table>
+<table class="table table-bordered">
     @*tr: table row. tabloda satır oluşturma*@
     <tr>
         @*th: table head. başlık olduğu için kalın punto ile çıktı verir*@
@@ -16,6 +20,7 @@
         <th>Kategori Adı</th>
         <th>Açıklama</th>
         <th>Durum</th>
+        <th>Güncelle</th>
     </tr>
     <tr>
         @*td: table data. tablo verileri listelendiği için normal punto ile çıktı verir.*@
@@ -23,5 +28,30 @@
         <td>Eğitim</td>
         <td>Açıklamamız budur</td>
         <td>True</td>
+        <td><button class="btn btn-success">Güncelle</button></td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Spor</td>
+        <td>Açıklamamız budur2</td>
+        <td>True</td>
+        <td><button class="btn btn-success">Güncelle</button></td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Kitap</td>
+        <td>Açıklamamız budur3</td>
+        <td>True</td>
+        <td><button class="btn btn-success">Güncelle</button></td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>Sinema</td>
+        <td>Açıklamamız budur4</td>
+        <td>True</td>
+        <td><button class="btn btn-success">Güncelle</button></td>
     </tr>
 </table>
+<button class="btn btn-info">Yeni Kategori</button>
+<button class="btn btn-warning">Kategori Listesi</button>
+<button class="btn btn-danger">Kategori Açıklamaları</button>
